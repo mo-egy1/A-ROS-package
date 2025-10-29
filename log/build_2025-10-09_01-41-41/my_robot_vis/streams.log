@@ -1,0 +1,19 @@
+[1.023s] Invoking command in '/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build --no-deps symlink_data
+[1.401s] running develop
+[1.661s] running egg_info
+[1.686s] writing my_robot_vis.egg-info/PKG-INFO
+[1.686s] writing dependency_links to my_robot_vis.egg-info/dependency_links.txt
+[1.686s] writing entry points to my_robot_vis.egg-info/entry_points.txt
+[1.687s] writing requirements to my_robot_vis.egg-info/requires.txt
+[1.687s] writing top-level names to my_robot_vis.egg-info/top_level.txt
+[1.741s] reading manifest file 'my_robot_vis.egg-info/SOURCES.txt'
+[1.742s] writing manifest file 'my_robot_vis.egg-info/SOURCES.txt'
+[1.770s] running build_ext
+[1.770s] Creating /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my-robot-vis.egg-link (link to .)
+[1.771s] Installing move_demo script to /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/my_robot_vis
+[1.771s] 
+[1.771s] Installed /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis
+[1.771s] running symlink_data
+[1.773s] error: [Errno 17] File exists: '/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/urdf/my_robot.urdf' -> '/home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/urdf/my_robot.urdf'
+[1.773s] symbolically linking /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/urdf/my_robot.urdf -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/urdf
+[1.810s] Invoked command in '/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build --no-deps symlink_data

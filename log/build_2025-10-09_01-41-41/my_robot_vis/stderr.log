@@ -1,0 +1,1 @@
+error: [Errno 17] File exists: '/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/urdf/my_robot.urdf' -> '/home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/urdf/my_robot.urdf'

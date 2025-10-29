@@ -1,0 +1,18 @@
+
+source /opt/ros/jazzy/setup.bash
+source ~/Ros2_Proj/dev_ws/install/setup.bash
+rviz2
+
+
+
+
+colcon build --symlink-install --packages-select my_robot_vis
+source install/setup.bash
+ros2 launch my_robot_vis visualize.launch.py
+
+
+
+---
+ros2 run my_robot_vis move_demo
+
+

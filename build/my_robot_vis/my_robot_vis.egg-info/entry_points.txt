@@ -1,0 +1,2 @@
+[console_scripts]
+move_demo = my_robot_vis.move_demo:main

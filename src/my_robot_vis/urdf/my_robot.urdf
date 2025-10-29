@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<robot name="Robot_ai" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!--  single knob: change value to rescale whole robot  -->
+  <xacro:property name="scale" value="3000"/>   <!-- 3000 = 3 m, 5000 = 5 m, etc. -->
+
+  <!-- BASE -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.327442566767026 -0.322418149257851 0" rpy="0 0 0"/>
+      <mass value="1000000"/>
+      <inertia ixx="1.00515183668491" ixy="-1.9314511799309e-09" ixz="6.9200494914217e-12"
+               iyy="1.00515183641807" iyz="2.90466684454569e-10" izz="1.95747023507619"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Base_Robot_link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.372549027 0.372549027 0.372549027 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Base_Robot_link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- TURNTABLE -->
+  <link name="Povorotniy_Stol_Link">
+    <inertial>
+      <origin xyz="-0.0173721127826074 0.134626457681717 -1.92902756174229e-06" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.957273526607593" ixy="-0.000593760310083563" ixz="2.25674492587452e-06"
+               iyy="1.11070618667963" iyz="8.35815198636092e-07" izz="0.860416399160401"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Povorotniy_Stol_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+      <material name="white">
+        <color rgba="0.990196109 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Povorotniy_Stol_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="J_1_Base_Stol" type="revolute">
+    <parent link="base_link"/>
+    <child link="Povorotniy_Stol_Link"/>
+    <origin xyz="-0.32744 -0.32242 0.087525" rpy="1.5708 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="100000000" velocity="10"/>
+  </joint>
+
+  <!-- LIDARS (fixed, cosmetic) -->
+  <link name="lidar_link_1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.114"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="lidar_joint_1" type="fixed">
+    <parent link="Povorotniy_Stol_Link"/>
+    <child link="lidar_link_1"/>
+    <origin xyz="0.072557433 -0.32241814925785101 0.1" rpy="0 0 0"/>
+  </joint>
+
+  <link name="lidar_link_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.114"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="lidar_joint_2" type="fixed">
+    <parent link="Povorotniy_Stol_Link"/>
+    <child link="lidar_link_2"/>
+    <origin xyz="-0.727442567 -0.32241814925785101 0.1" rpy="0 0 0"/>
+  </joint>
+
+  <!-- SHOULDER -->
+  <link name="Plecho_1_Link">
+    <inertial>
+      <origin xyz="-3.21432714611714e-07 -0.0010789309414756 -0.248871119127319" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="2.04471987918707" ixy="2.44459223105891e-06" ixz="8.53495287788581e-06"
+               iyy="2.09174637289405" iyz="-0.232809642467245" izz="0.679676395909331"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Plecho_1_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.372549027 0.372549027 0.372549027 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Plecho_1_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="J_2_Stol_Plecho_1" type="revolute">
+    <parent link="Povorotniy_Stol_Link"/>
+    <child link="Plecho_1_Link"/>
+    <origin xyz="0 0.218 0" rpy="-1.5707926536057681 1.5707926536662187 3.1415926535746808"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="100000000" velocity="10"/>
+  </joint>
+
+  <!-- ARM SEGMENTS -->
+  <link name="Plecho_2_Link">
+    <inertial>
+      <origin xyz="0.0363006488339159 0.000852120058628336 9.77235896648665e-08" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.0544520712435956" ixy="0.000123072795450505" ixz="-9.27364082114557e-08"
+               iyy="0.0491376621620962" iyz="1.2815118988579e-06" izz="0.0661631062297424"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Plecho_2_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.372549027 0.372549027 0.372549027 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Plecho_2_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="J_3_Plecho_1_and_2" type="revolute">
+    <parent link="Plecho_1_Link"/>
+    <child link="Plecho_2_Link"/>
+    <origin xyz="0 0 -0.7" rpy="7.3464102064341e-06 1.5707926536057681 3.1415926535897931"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.3" upper="2.3" effort="100000000" velocity="10"/>
+  </joint>
+
+  <link name="Plecho_3_Link">
+    <inertial>
+      <origin xyz="-0.00192346932769394 -0.302848018473422 0.000208037577046183" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.623184592588383" ixy="-0.0506568192517393" ixz="-1.37120879057179e-06"
+               iyy="0.163273915359157" iyz="-6.82521378275315e-05" izz="0.578369801867507"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Plecho_3_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.372549027 0.372549027 0.372549027 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Plecho_3_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="J_4_Plecho_2_and_3" type="revolute">
+    <parent link="Plecho_2_Link"/>
+    <child link="Plecho_3_Link"/>
+    <origin xyz="0.14 0 0" rpy="3.1415853071795872 -4.2351647362715017e-22 -1.5708"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="100000000" velocity="10"/>
+  </joint>
+
+  <link name="Plecho_4_Link">
+    <inertial>
+      <origin xyz="2.38756184822719e-07 0.000974559579176915 -0.00750704616042275" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.139458766027021" ixy="7.99264996388873e-07" ixz="-4.730613256177e-07"
+               iyy="0.167961345710681" iyz="0.000138347739417231" izz="0.154909759126578"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Plecho_4_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+      <material name="white">
+        <color rgba="0.990196109 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Plecho_4_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="J_5_Plecho_3_and_4" type="revolute">
+    <parent link="Plecho_3_Link"/>
+    <child link="Plecho_4_Link"/>
+    <origin xyz="0 -0.56 0" rpy="-1.5707926536057681 1.5707926536662187 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.0" upper="2.0" effort="100000000" velocity="10"/>
+  </joint>
+
+  <link name="Kist_Link">
+    <inertial>
+      <origin xyz="4.77395900588817e-15 0.027968264206145 -1.69864122767649e-14" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.000658600251045382" ixy="1.01132086694409e-18" ixz="3.25260651745651e-19"
+               iyy="0.000944359788990718" iyz="-1.30235326814037e-18" izz="0.000658600251045382"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Kist_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+      <material name="white">
+        <color rgba="0.990196109 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_vis/meshes/Kist_Link.STL" scale="${scale} ${scale} ${scale}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="J_6_Plecho_4_Kist" type="revolute">
+    <parent link="Plecho_4_Link"/>
+    <child link="Kist_Link"/>
+    <origin xyz="0 0 -0.174" rpy="1.5708 5.551115123125783e-17 -2.0943999999999998"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="100000000" velocity="10"/>
+  </joint>
+</robot>

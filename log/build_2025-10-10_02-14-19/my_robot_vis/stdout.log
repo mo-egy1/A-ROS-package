@@ -1,0 +1,42 @@
+running develop
+Removing /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my-robot-vis.egg-link (link to .)
+running egg_info
+writing ../../build/my_robot_vis/my_robot_vis.egg-info/PKG-INFO
+writing dependency_links to ../../build/my_robot_vis/my_robot_vis.egg-info/dependency_links.txt
+writing entry points to ../../build/my_robot_vis/my_robot_vis.egg-info/entry_points.txt
+writing requirements to ../../build/my_robot_vis/my_robot_vis.egg-info/requires.txt
+writing top-level names to ../../build/my_robot_vis/my_robot_vis.egg-info/top_level.txt
+reading manifest file '../../build/my_robot_vis/my_robot_vis.egg-info/SOURCES.txt'
+writing manifest file '../../build/my_robot_vis/my_robot_vis.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build
+creating /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build/lib
+creating /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build/lib/my_robot_vis
+copying my_robot_vis/__init__.py -> /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build/lib/my_robot_vis
+copying my_robot_vis/move_demo.py -> /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build/lib/my_robot_vis
+running install
+running install_lib
+creating /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my_robot_vis
+copying /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build/lib/my_robot_vis/__init__.py -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my_robot_vis
+copying /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build/lib/my_robot_vis/move_demo.py -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my_robot_vis
+byte-compiling /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my_robot_vis/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my_robot_vis/move_demo.py to move_demo.cpython-312.pyc
+running install_data
+copying resource/my_robot_vis -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/ament_index/resource_index/packages
+copying package.xml -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis
+copying launch/visualize.launch.py -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/launch
+copying urdf/my_robot.urdf -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/urdf
+copying rviz/default.rviz -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/rviz
+copying meshes/Plecho_4_Link.STL -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/meshes
+copying meshes/Plecho_3_Link.STL -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/meshes
+copying meshes/Base_Robot_link.STL -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/meshes
+copying meshes/Plecho_2_Link.STL -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/meshes
+copying meshes/Povorotniy_Stol_Link.STL -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/meshes
+copying meshes/Plecho_1_Link.STL -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/meshes
+copying meshes/Kist_Link.STL -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/meshes
+running install_egg_info
+Copying ../../build/my_robot_vis/my_robot_vis.egg-info to /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my_robot_vis-0.0.0-py3.12.egg-info
+running install_scripts
+Installing move_demo script to /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/my_robot_vis
+writing list of installed files to '/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/install.log'

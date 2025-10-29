@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing my_robot_vis.egg-info/PKG-INFO
+writing dependency_links to my_robot_vis.egg-info/dependency_links.txt
+writing entry points to my_robot_vis.egg-info/entry_points.txt
+writing requirements to my_robot_vis.egg-info/requires.txt
+writing top-level names to my_robot_vis.egg-info/top_level.txt
+reading manifest file 'my_robot_vis.egg-info/SOURCES.txt'
+writing manifest file 'my_robot_vis.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my-robot-vis.egg-link (link to .)
+Installing move_demo script to /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/my_robot_vis
+
+Installed /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis
+running symlink_data
+symbolically linking /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/urdf/my_robot.urdf -> /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/urdf
+error: [Errno 17] File exists: '/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/urdf/my_robot.urdf' -> '/home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/share/my_robot_vis/urdf/my_robot.urdf'

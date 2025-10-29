@@ -1,0 +1,17 @@
+[1.705s] Invoking command in '/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build --no-deps symlink_data
+[2.094s] running develop
+[2.347s] running egg_info
+[2.370s] writing my_robot_vis.egg-info/PKG-INFO
+[2.371s] writing dependency_links to my_robot_vis.egg-info/dependency_links.txt
+[2.371s] writing entry points to my_robot_vis.egg-info/entry_points.txt
+[2.372s] writing requirements to my_robot_vis.egg-info/requires.txt
+[2.373s] writing top-level names to my_robot_vis.egg-info/top_level.txt
+[2.419s] reading manifest file 'my_robot_vis.egg-info/SOURCES.txt'
+[2.420s] writing manifest file 'my_robot_vis.egg-info/SOURCES.txt'
+[2.447s] running build_ext
+[2.449s] Creating /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my-robot-vis.egg-link (link to .)
+[2.451s] Installing move_demo script to /home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/my_robot_vis
+[2.452s] 
+[2.452s] Installed /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis
+[2.452s] running symlink_data
+[2.491s] Invoked command in '/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selysecr/Ros2_Proj/dev_ws/install/my_robot_vis/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/selysecr/Ros2_Proj/dev_ws/build/my_robot_vis/build --no-deps symlink_data

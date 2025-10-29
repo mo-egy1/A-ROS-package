@@ -1,0 +1,24 @@
+[1.607s] Invoking command in '/home/selysecr/dev_ws/build/my_robot_vis': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/selysecr/dev_ws/build/my_robot_vis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selysecr/dev_ws/install/my_robot_vis/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/selysecr/dev_ws/build/my_robot_vis/build --no-deps symlink_data
+[1.991s] running develop
+[2.239s] running egg_info
+[2.239s] creating my_robot_vis.egg-info
+[2.263s] writing my_robot_vis.egg-info/PKG-INFO
+[2.263s] writing dependency_links to my_robot_vis.egg-info/dependency_links.txt
+[2.263s] writing entry points to my_robot_vis.egg-info/entry_points.txt
+[2.263s] writing requirements to my_robot_vis.egg-info/requires.txt
+[2.264s] writing top-level names to my_robot_vis.egg-info/top_level.txt
+[2.264s] writing manifest file 'my_robot_vis.egg-info/SOURCES.txt'
+[2.312s] reading manifest file 'my_robot_vis.egg-info/SOURCES.txt'
+[2.313s] writing manifest file 'my_robot_vis.egg-info/SOURCES.txt'
+[2.339s] running build_ext
+[2.342s] Creating /home/selysecr/dev_ws/install/my_robot_vis/lib/python3.12/site-packages/my-robot-vis.egg-link (link to .)
+[2.342s] Installing move_demo script to /home/selysecr/dev_ws/install/my_robot_vis/lib/my_robot_vis
+[2.343s] 
+[2.343s] Installed /home/selysecr/dev_ws/build/my_robot_vis
+[2.343s] running symlink_data
+[2.343s] creating /home/selysecr/dev_ws/install/my_robot_vis/share/ament_index
+[2.343s] creating /home/selysecr/dev_ws/install/my_robot_vis/share/ament_index/resource_index
+[2.344s] creating /home/selysecr/dev_ws/install/my_robot_vis/share/ament_index/resource_index/packages
+[2.344s] symbolically linking /home/selysecr/dev_ws/build/my_robot_vis/resource/my_robot_vis -> /home/selysecr/dev_ws/install/my_robot_vis/share/ament_index/resource_index/packages
+[2.344s] symbolically linking /home/selysecr/dev_ws/build/my_robot_vis/package.xml -> /home/selysecr/dev_ws/install/my_robot_vis/share/my_robot_vis
+[2.380s] Invoked command in '/home/selysecr/dev_ws/build/my_robot_vis' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/selysecr/dev_ws/build/my_robot_vis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selysecr/dev_ws/install/my_robot_vis/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/selysecr/dev_ws/build/my_robot_vis/build --no-deps symlink_data
